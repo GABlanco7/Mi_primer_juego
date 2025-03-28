@@ -32,9 +32,11 @@ body{
     padding-left: 10px;
 }
 
-.tarjetas{
-    display: flex;
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
     gap: 10px;
+    justify-items: center; /* Centra las tarjetas horizontalmente */
 }
 
 .tarjeta-de-mokepon{
