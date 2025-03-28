@@ -1,93 +1,92 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MOKEPON</title>
-        <script src="./js/mokepon.js"></script>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOKEPON</title>
+    <script defer src="./js/mokepon.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-    <body>
-        <section id="seleccionar-mascota">
-            <h1 class="titulo">Mokepon</h1>
+    <section id="seleccionar-mascota">
+        <h1 class="titulo">Mokepon</h1>
+        <h2 class="subtitulo">Elige tu Mascota:</h2>
 
-            <h2 class="subtitulo">Elige tu Mascota:</h2>
+        <div class="tarjetas">
+            <label class="tarjeta-de-mokepon">
+                <input type="radio" name="mascota" id="hipodoge">
+                <p>Hipodoge</p>
+                <img src="./assets/hipodoge.png" alt="Hipodoge">
+            </label>
 
-            <div class="tarjetas">
-                <label class="tarjeta-de-mokepon">
-                    <input type="radio" name="mascota" id="hipodoge">
-                    <p>Hipodoge</p>
-                    <img src="./assets/hipodoge.png" alt="Hipodoge">
-                </label>
-            
-                <label class="tarjeta-de-mokepon">
-                    <input type="radio" name="mascota" id="capipepo">
-                    <p>Capipepo</p>
-                    <img src="assets/capipepo.png" alt="Capipepo">
-                </label>
-            
-                <label class="tarjeta-de-mokepon">
-                    <input type="radio" name="mascota" id="ratigueya">
-                    <p>Ratigueya</p>
-                    <img src="assets/ratigueya.png" alt="Ratigueya">
-                </label>
-            
-                <label class="tarjeta-de-mokepon">
-                    <input type="radio" name="mascota" id="conefofo">
-                    <p>Conefofo</p>
-                    <img src="./assets/Conefofo.png" alt="Conefofo">
-                </label>
-            
-                <label class="tarjeta-de-mokepon">
-                    <input type="radio" name="mascota" id="serpitonsky">
-                    <p>Serpitonsky</p>
-                    <img src="./assets/Serpitonsky.png" alt="Serpitonsky">
-                </label>
-            
-                <label class="tarjeta-de-mokepon">
-                    <input type="radio" name="mascota" id="the-goat">
-                    <p>The-Goat</p>
-                    <img src="./assets/the-goat.png" alt="The-goat">
-                </label>
-            </div>            
+            <label class="tarjeta-de-mokepon">
+                <input type="radio" name="mascota" id="capipepo">
+                <p>Capipepo</p>
+                <img src="assets/capipepo.png" alt="Capipepo">
+            </label>
 
-            <button id="boton-mascota">Seleccionar</button>
-        </section>
+            <label class="tarjeta-de-mokepon">
+                <input type="radio" name="mascota" id="ratigueya">
+                <p>Ratigueya</p>
+                <img src="assets/ratigueya.png" alt="Ratigueya">
+            </label>
 
+            <label class="tarjeta-de-mokepon">
+                <input type="radio" name="mascota" id="conefofo">
+                <p>Conefofo</p>
+                <img src="./assets/Conefofo.png" alt="Conefofo">
+            </label>
 
-        <section id="seleccionar-ataque">
-            <h1 class="titulo">Mokepon</h1>
-            <h2 class="subtitulo">Elige tu Ataque:</h2>
-            
+            <label class="tarjeta-de-mokepon">
+                <input type="radio" name="mascota" id="serpitonsky">
+                <p>Serpitonsky</p>
+                <img src="./assets/Serpitonsky.png" alt="Serpitonsky">
+            </label>
+
+            <label class="tarjeta-de-mokepon">
+                <input type="radio" name="mascota" id="the-goat">
+                <p>The-Goat</p>
+                <img src="./assets/the-goat.png" alt="The-goat">
+            </label>
+        </div>            
+
+        <button id="boton-mascota">Seleccionar</button>
+    </section>
+
+    <section id="seleccionar-ataque">
+        <h1 class="titulo">Mokepon</h1>
+        <h2 class="subtitulo">Elige tu Ataque:</h2>
+        
+        <div>
+            <button id="boton-fuego" class="boton-ataque">Fuego 🔥</button>
+            <button id="boton-agua" class="boton-ataque">Agua 💧</button>
+            <button id="boton-tierra" class="boton-ataque">Tierra 🌱</button>
+        </div>
+
+        <div id="mensajes">
+            <p id="resultado">¡Mucha Suerte!</p>
+        </div>
+
+        <div class="ataques">
             <div>
-                <button id="boton-fuego" class="boton-ataque">Fuego 🔥</button>
-                <button id="boton-agua" class="boton-ataque">Agua 💧</button>
-                <button id="boton-tierra" class="boton-ataque">Tierra 🌱</button>
+                <p id="vidas-jugador">3</p>
+                <p id="mascota-jugador"></p>
+                <p id="ataques-del-jugador"></p>
             </div>
 
+            <div>
+                <p id="vidas-enemigo">3</p>
+                <p id="mascota-enemigo"></p>
+                <p id="ataques-del-enemigo"></p>
+            </div>                
+        </div>
 
-            <div id="mensajes">
-                <p id="resultado">Mucha Suerte!</p>
+        <div id="opciones-final">
+            <button id="boton-reiniciar">Volver a Jugar</button>
+            <button id="boton-inicio">Volver al Inicio</button>
+        </div>
+    </section>
 
-                <section id="reiniciar">
-                    <button id="boton-reiniciar">Reiniciar</button>
-                </section>
-            </div>
-
-            <div class="ataques">
-                <div>
-                    <p id="vidas-jugador">3</p>
-                    <p id="mascota-jugador"></p>
-                    <p id="ataques-del-jugador"></p>
-                </div>
-
-                <div>
-                    <p id="vidas-enemigo">3</p>
-                    <p id="mascota-enemigo"></p>
-                    <p id="ataques-del-enemigo"></p>
-                </div>                
-            </div>
-        </section>
-    </body>
+</body>
 </html>
